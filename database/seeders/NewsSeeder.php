@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
 
@@ -31,7 +30,7 @@ class NewsSeeder extends Seeder
         \App\Models\News\News::factory(50)
             ->create()
             ->each(
-                fn($news) => $news->attachTags([
+                fn ($news) => $news->attachTags([
                     Arr::random($tags),
                     Arr::random($tags),
                     'Via seeder',

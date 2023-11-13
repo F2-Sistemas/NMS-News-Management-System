@@ -2,6 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/dashboard', function () {
-    return 'Aqui vai a dashboard';
-})->name('dashboard');
+Route::get('/dashboard', fn () => 'Aqui vai a dashboard')->name('dashboard');

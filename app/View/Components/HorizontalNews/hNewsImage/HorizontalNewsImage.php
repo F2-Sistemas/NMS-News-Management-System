@@ -8,8 +8,8 @@ use Illuminate\View\Component;
 
 class HorizontalNewsImage extends Component
 {
-
     public $title;
+
     /**
      * Create a new component instance.
      */

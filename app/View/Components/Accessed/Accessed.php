@@ -7,7 +7,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use App\Models\News\News;
 
-
 class Accessed extends Component
 {
     /**
@@ -21,7 +20,7 @@ class Accessed extends Component
     //  }
     public function __construct(?int $accessedNews = null)
     {
-        $this->accessedNews = News::orderBy('created_at', 'desc')->where('featured',  false)->limit(5)->get();
+        $this->accessedNews = News::orderBy('created_at', 'desc')->where('featured', false)->limit(5)->get();
     }
 
     /**

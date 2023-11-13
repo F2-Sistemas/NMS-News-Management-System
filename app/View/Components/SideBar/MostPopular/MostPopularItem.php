@@ -10,6 +10,7 @@ class MostPopularItem extends Component
 {
     public $description;
     public $date;
+
     /**
      * Create a new component instance.
      */

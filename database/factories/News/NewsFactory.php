@@ -19,8 +19,8 @@ class NewsFactory extends Factory
     {
         return [
             'title' => ucfirst(fake()->words(10, true)),
-            'slug' => fn(array $attr) => str($attr['title'])->slug(),
-            'cover' => function() {
+            'slug' => fn (array $attr) => str($attr['title'])->slug(),
+            'cover' => function () {
                 $storagePath = Storage::disk('public')?->path('demo-cover.jpg');
                 $demoDataPath = database_path('demo-data/images/demo-cover.jpg');
 
@@ -28,12 +28,11 @@ class NewsFactory extends Factory
                     return is_file($storagePath) ? 'demo-cover.jpg' : null;
                 }
 
-                if (!is_file($storagePath)) {                    
+                if (!is_file($storagePath)) {
                     copy($demoDataPath, $storagePath);
                 }
 
                 return is_file($storagePath) ? 'demo-cover.jpg' : null;
-
             },
             'subtitle' => fake()->words(15, true),
             'featured' => fake()->boolean(10),

@@ -18,6 +18,7 @@ class LanguageMiddleware
     {
         $lang = \App\Http\Controllers\Web\News\SetLanguageController::setLang($request);
         Config::set('app.locale', $lang);
+
         // dd($lang);
         // dd(session()->get('lang'));
         return $next($request);

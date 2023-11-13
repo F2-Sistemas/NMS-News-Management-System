@@ -7,7 +7,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use App\Models\News\News;
 
-
 class AccessedItem extends Component
 {
     public string $classSuffix = '';

@@ -10,6 +10,7 @@ class HorizontalNewsImageItem extends Component
 {
     public $title;
     public $date;
+
     /**
      * Create a new component instance.
      */

@@ -14,8 +14,7 @@ class VerticalNewsItem extends Component
      */
     public function __construct(
         public News $news
-    )
-    {
+    ) {
         //
     }
 

@@ -32,7 +32,7 @@ class Tags extends Component
         return cache()->remember(
             __METHOD__,
             (20 * 60),
-            fn() => Tag::select('name', 'slug')->limit(12)->get()
+            fn () => Tag::select('name', 'slug')->limit(12)->get()
         );
     }
 }

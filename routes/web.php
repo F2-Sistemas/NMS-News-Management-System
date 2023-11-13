@@ -3,7 +3,6 @@
 use App\Http\Controllers\Web\News\SetLanguageController;
 use App\Http\Controllers\Web\News\NewsController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,22 +15,18 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('news.home');
-})->name('home');
+Route::get('/', fn () => view('news.home'))->name('home');
 
 Route::get('/blog', [NewsController::class, 'index'])->name('blog.index');
 Route::get('/blog/{post}', [NewsController::class, 'show'])->name('blog.show');
 
-Route::get('/contact', function (){
-    return view('news.contact');
-})->name('contact');
+Route::get('/contact', fn () => view('news.contact'))->name('contact');
 
 Route::middleware(['auth'])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
-    require_once __DIR__ . '/admin.php';
-});
+        require_once __DIR__ . '/admin.php';
+    });
 
 Route::get('/set-language/{lang?}', SetLanguageController::class)->name('set-language');

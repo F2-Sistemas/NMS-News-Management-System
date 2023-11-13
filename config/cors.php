@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Cross-Origin Resource Sharing (CORS) Configuration
@@ -33,8 +32,8 @@ return [
 
     'allowed_hosts' => array_filter(
         array_map(
-            'trim', explode(',', strval(env('CORS_ALLOWED_HOSTS')))
+            'trim',
+            explode(',', strval(env('CORS_ALLOWED_HOSTS')))
         )
     ),
-
 ];

@@ -35,7 +35,7 @@ class VerticalNews extends Component
                 $subQuery
                     ->when(
                         $tag,
-                        fn($subQuery2) => $subQuery2->where('slug->' . ($lang ?: 'en'), $tag)
+                        fn ($subQuery2) => $subQuery2->where('slug->' . ($lang ?: 'en'), $tag)
                     );
             });
 

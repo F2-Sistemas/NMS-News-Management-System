@@ -30,5 +30,4 @@ class News extends Model
     {
         return Config::get('app.locale', 'en');
     }
-
 }
