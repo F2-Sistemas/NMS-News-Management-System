@@ -23,6 +23,7 @@
     <link href="{{asset('css/style_1.css')}}" rel="stylesheet" type="text/css"/>
     <!-- Modernizr JS -->
     <script src="{{asset('js/modernizr-3.5.0.min.js')}}"></script>
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" />
 </head>
 <body
     @class([
